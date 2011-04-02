@@ -1,0 +1,65 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: url("/img/space.jpeg");
+}
+
+.invader, #spaceship, #help, .bullet{
+	background: url("/img/space-invaders-sprite.png") no-repeat top left;
+}
+
+#spaceship{
+	width: 128px;
+	height: 128px;
+	bottom: 0;
+	position: absolute;
+	left: 50%;
+	margin-left: -64px;
+}
+
+.bullet{
+	width: 32px;
+	height: 32px;
+	display: none;
+	background-position: 0 -547px;
+	position: absolute;
+}
+
+#help, .invader{
+	width: 64px;
+	height: 64px;
+	position: absolute;
+	top: 0;
+}
+
+#help{ 
+	background-position: 0 -478px;
+	top: 50%;
+	right: 10px;
+	cursor: pointer;
+}
+
+.clamps{
+	background-position: 0 -133px;
+}
+
+.donbot{
+	background-position: 0 -202px;
+}
+
+.futurama{
+	background-position: 0 -271px;
+}
+
+.morbo{
+	background-position: 0 -340px;
+}
+
+.nibbler{
+	background-position: 0 -409px;
+}
