@@ -7,9 +7,7 @@
 	<link href="/lib/facebox/facebox.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<div id="spaceship">
-		<div class="bullet"></div>
-	</div>
+	<div class="bullet"></div>
 	<div id="help">
 		<div style="display: none;">
 			<h1>Space Invaders</h1>
@@ -36,7 +34,7 @@
 	<script src="/js/invader.js" type="text/javascript"></script>
 	<script>
 		$(document).ready(function(){
-			Space.setSpaceship('#spaceship').addInvaders(['futurama', 'donbot', 'clamps', 'morbo', 'nibbler']);
+			Space.setSpaceship({spaceship: 'spaceship', bullet: 'bullet'}).addInvaders(['futurama', 'donbot', 'clamps', 'morbo', 'nibbler']);
 		});
 	</script> 
 </body>

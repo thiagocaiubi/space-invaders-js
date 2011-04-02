@@ -9,11 +9,11 @@ body{
 	background: url("/img/space.jpeg");
 }
 
-.invader, #spaceship, #help, .bullet{
+.invader, .spaceship, .bullet, #help{
 	background: url("/img/space-invaders-sprite.png") no-repeat top left;
 }
 
-#spaceship{
+.spaceship{
 	width: 128px;
 	height: 128px;
 	bottom: 0;

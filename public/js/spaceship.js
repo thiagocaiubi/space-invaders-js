@@ -1,6 +1,6 @@
-var Spaceship = function(spaceship) {
-	var spaceship = $(spaceship),
-		bullet = spaceship.find(".bullet"),
+var Spaceship = function(options) {
+	var spaceship = $(['<div class="', options.spaceship, '"></div>'].join('')).appendTo(Space.universe),
+		bullet = $(['<div class="', options.bullet, '"></div>'].join('')).appendTo(Space.universe),
 		step = 25;
 	
 	function move(direction) {
