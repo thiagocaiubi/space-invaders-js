@@ -19,7 +19,7 @@ describe('Spaceship', function() {
 		expect(spaceshipDiv.offset().left).toBe(previous - 25);
 	});
 	
-	it('should respect left boundry', function() {
+	it('should respect left boundary', function() {
 		var previous = spaceshipDiv.offset({left: 0});
 		spaceship.moveLeft();
 		expect(spaceshipDiv.offset().left).toBe(0);
@@ -31,14 +31,15 @@ describe('Spaceship', function() {
 		expect(spaceshipDiv.offset().left).toBe(previous + 25);
 	});
 	
-	it('should respect right boundry', function() {
+	it('should respect right boundary', function() {
 		var left = Space.getBoundaries().right - spaceshipDiv.width();
-		var previous = spaceshipDiv.offset({left: left});
+		spaceshipDiv.offset({left: left});
 		spaceship.moveRight();
 		expect(spaceshipDiv.offset().left).toBe(left);
 	});
 	
 	it('should fire', function() {
+		//TODO
 	});
 	
 	afterEach(function(){
