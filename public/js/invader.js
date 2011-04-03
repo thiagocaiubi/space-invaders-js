@@ -15,20 +15,20 @@ var Invader = function(invader) {
 		});
 	}
 	
-	this.attack = function(){
-		invader.hide().appendTo(Space.universe);
-		var left = Math.random() * (Space.getBoundaries().right - invader.width());
-		invader.offset({left: left}).fadeIn();
-		bindBulletFired(this);
-    };
-    
-    this.viewport = function(){
+	function viewport(){
     	var offset = invader.offset();
     	return {
     		right: offset.left + invader.width(), 
     		bottom: offset.top + invader.height(),
     		left: offset.left
     	};
+    };
+	
+	this.attack = function(){
+		invader.hide().appendTo(Space.universe);
+		var left = Math.random() * (Space.getBoundaries().right - invader.width());
+		invader.offset({left: left}).fadeIn();
+		bindBulletFired(this);
     };
     
     this.destroy = function(){

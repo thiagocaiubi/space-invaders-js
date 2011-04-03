@@ -2,7 +2,7 @@ var Spaceship = function(options) {
 	var spaceship = $(['<div class="', options.spaceship, '"></div>'].join('')).appendTo(Space.universe),
 		bullet = $(['<div class="', options.bullet, '"></div>'].join('')).appendTo(Space.universe),
 		step = 25;
-	
+
 	function move(direction) {
 		var previous = spaceship.offset().left,
 			next = previous + (direction * step),
@@ -23,7 +23,7 @@ var Spaceship = function(options) {
     	move(1);
     };
     
-    this.fire = function(options){
+    this.fire = function(){
     	new Bullet({
     		spaceship: spaceship,
     		bullet: bullet

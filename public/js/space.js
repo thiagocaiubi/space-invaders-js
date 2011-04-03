@@ -1,5 +1,6 @@
 var Space = {
 	universe: $(document.body),
+	
 	setSpaceship: function(spaceship){
 		var spaceship = new Spaceship(spaceship),
 			action = {
@@ -7,7 +8,6 @@ var Space = {
 				38: spaceship.fire,
 				39: spaceship.moveRight
 			};
-		
 		$(document).keydown(function(event){
 			(action[event.which] || function(){})();
 		});

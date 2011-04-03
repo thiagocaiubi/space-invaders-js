@@ -1,7 +1,6 @@
 var Bullet = function(options){
 	var spaceship = options.spaceship,
 		bullet = options.bullet;
-		bulletLeft = 0;
 	
 	function loadBullet(){
 		var offset = spaceship.offset();
