@@ -5,6 +5,7 @@ var Space = {
 		var spaceship = new Spaceship(spaceship),
 			action = {
 				37: spaceship.moveLeft,
+				32: spaceship.fire,
 				38: spaceship.fire,
 				39: spaceship.moveRight
 			};

@@ -28,7 +28,7 @@ var Invader = function(invader) {
     };
     
     this.destroy = function(){
-    	invader.fadeOut('slow', this.xpto);
+    	invader.fadeOut('slow', setInvaderPosition);
     };
     
     this.viewport = function(){

@@ -10,8 +10,8 @@ var Spaceship = function(options) {
 		if(boundaries.left >= next){
 			next = boundaries.left; 
 		} else if(boundaries.right <= next + spaceship.width()){
-			next = boundaries.right - spaceship.width(); 
-		} 
+			next = boundaries.right - spaceship.width();
+		}
 		spaceship.offset({left: next});
 	}
 	
