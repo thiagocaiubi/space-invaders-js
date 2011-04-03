@@ -3,13 +3,14 @@ html,body{
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
 }
 
 body{
 	background: url("/img/space.jpeg");
 }
 
-.invader, .spaceship, .bullet, #help{
+.invader, .spaceship, .bullet{
 	background: url("/img/space-invaders-sprite.png") no-repeat top left;
 }
 
@@ -30,22 +31,11 @@ body{
 	position: absolute;
 }
 
-#help, .invader{
+.invader{
 	width: 64px;
 	height: 64px;
 	position: absolute;
 	top: 0;
-}
-
-#help{ 
-	background-position: 0 -478px;
-	top: 50%;
-	right: 10px;
-	cursor: pointer;
-}
-
-#help div{
-	display: none;
 }
 
 .clamps{

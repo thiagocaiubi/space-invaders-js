@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$.facebox.settings.closeImage = '/lib/facebox/closelabel.png';
 	$.facebox.settings.loadingImage = '/lib/facebox/loading.gif';
-	$('#help').click(function(){
-		$.facebox({div: '#help div'});	
+	$('#help').click(function(event){
+		$.facebox({div: '#' + event.target.id});
 	}).click();
 });
