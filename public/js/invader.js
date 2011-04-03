@@ -1,5 +1,5 @@
 var Invader = function(invader) {
-	var invader = $(['<div class="invader ', invader,'"></div>'].join(''));
+	var invader = $(['<div class="invader ', invader,'"></div>'].join('')).hide().appendTo(Space.universe);
 
 	function bindBulletFired(invader){
 		$(document).bind("bullet:fired", function(event, options){
@@ -10,20 +10,25 @@ var Invader = function(invader) {
 			bottom = now + bullet.height(),
 			viewport = invader.viewport();
 			if (viewport.bottom >= bottom && (viewport.left <= bulletLeft && viewport.right >= bulletRight)) {
+				bullet.stop();
+				bullet.remove();
 				invader.destroy();
 			}
 		});
 	}
 	
-	this.attack = function(){
-		invader.hide().appendTo(Space.universe);
-		var left = Math.random() * (Space.getBoundaries().right - invader.width());
-		invader.offset({left: left}).fadeIn();
+    function setInvaderPosition(){
+    	var left = Math.random() * (Space.getBoundaries().right - invader.width());
+		invader.css({left: left}).fadeIn('slow');
+    };
+    
+    this.attack = function(){
+		setInvaderPosition();
 		bindBulletFired(this);
     };
     
     this.destroy = function(){
-    	invader.fadeOut();
+    	invader.fadeOut('slow', this.xpto);
     };
     
     this.viewport = function(){

@@ -5,11 +5,12 @@ var Bullet = function(options){
 	function loadBullet(){
 		var offset = spaceship.offset();
 		bulletLeft = offset.left + (spaceship.width() / 2) - (bullet.width() / 2);
-		return bullet.clone().offset({left: bulletLeft, top: offset.top}).appendTo(spaceship.parent());
+		return bullet.clone().offset({left: bulletLeft, top: offset.top}).appendTo(spaceship.parent()).show();
 	}
 	
 	this.fire = function(){
-		var bullet = loadBullet();
+		var bullet = loadBullet(),
+		top = -bullet.height();
 		bullet.show().animate({
 			top: -bullet.height()
 		}, 
