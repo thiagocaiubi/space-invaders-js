@@ -17,7 +17,7 @@
 	display: none;
 }
 
-#info h1, #info h3{
+#info h1, #info h3, #info .play{
   font-family: 'Slackey', serif;
   font-style: normal;
   font-weight: 400;
@@ -40,10 +40,15 @@
 	font-weight: normal;
 }
 
-#info div ul{
-	list-style-type: none;
+#info div ol li {
+	line-height: 30px;
 }
 
-#info div ul li{
-	display: inline;
+#info p{
+	text-align: center;
+}
+
+#info .play{
+	font-size: 120%;
+	cursor: pointer;
 }
